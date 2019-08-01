@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="/confirmation">
+<form action="/SubmitedItem">
 	Name: <input type="text" name="name"><br> 
 	Description: <input type="text" name="description"><br> 
 	Price: <input type="number" step="0.01" name="price"><br> 
