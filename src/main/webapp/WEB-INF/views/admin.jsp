@@ -5,21 +5,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index </title>
+<title>Item Admin</title>
 </head>
 <body>
-
-<div>
-<a href="/admin">Admin page</a>
-</div>
-
-	<h1>Welcome to Grand Circus' Coffee Kaffee Haus</h1>
-
-	<a href="/registration-form">Sign up today to get $5 off the newest coffee.</a>
 
 	<c:forEach var="product" items="${Products}">
 		<p>${product.name}${product.description} ${product.price}</p>
 	</c:forEach>
+
+	<a href="/add">Add Item to Menu</a>
 
 </body>
 </html>

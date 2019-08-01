@@ -8,10 +8,10 @@
 </head>
 <body>
 
-<form action="/confirmation">
+<form method="post">
   Username: <input type="text" name="username"><br>
   Password: <input type="text" name="password"><br>
-  Name: <input type="text" name="name"><br>
+  Name: <input type="text" name="firstName"><br>
   
   <input type="submit" value="Submit"> 
   </form>
