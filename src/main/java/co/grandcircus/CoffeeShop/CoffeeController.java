@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.CoffeeShop.dao.ProductDao;
@@ -51,8 +52,6 @@ public ModelAndView printResults(User name) {
 	return mv;
 }
 
-
-
 @RequestMapping("/admin")
 public ModelAndView admin() {
 	
@@ -68,8 +67,18 @@ public ModelAndView admin() {
 @RequestMapping("/add")
 public ModelAndView add() {
 	return new ModelAndView("AddItem");
-	
 }
 	
+@PostMapping("/SubmittedItem")
+public ModelAndView submitted(Product product) {
+	dao.create(product);
+	return new ModelAndView("SubmittedItem");
+}
+
+@RequestMapping("/delete")
+public ModelAndView removed(@RequestParam("id")Long id) {
+	dao.delete(id);
+	return new ModelAndView("redirect:/admin");
+}
 
 }

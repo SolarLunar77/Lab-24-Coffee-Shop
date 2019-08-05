@@ -15,7 +15,7 @@
 
 	<h1>Welcome to Grand Circus' Coffee Kaffee Haus</h1>
 
-	<a href="/registration-form">Sign up today to get $5 off the newest coffee.</a>
+	<a href="/registration-form">Register today to get $5 off the newest coffee.</a>
 
 	<c:forEach var="product" items="${Products}">
 		<p>${product.name}${product.description} ${product.price}</p>

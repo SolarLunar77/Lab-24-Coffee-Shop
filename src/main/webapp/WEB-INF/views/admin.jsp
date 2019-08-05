@@ -10,10 +10,14 @@
 <body>
 
 	<c:forEach var="product" items="${Products}">
-		<p>${product.name}${product.description} ${product.price}</p>
+		<p>${product.name} ${product.description} ${product.price}
+		<a href="/delete?id=${product.id}"> Delete an Item From the Menu</a>
+		</p>
 	</c:forEach>
-
+	 
 	<a href="/add">Add Item to Menu</a>
+	
+	
 
 </body>
 </html>

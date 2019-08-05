@@ -14,14 +14,12 @@ public class Product {
 	Long id;
 	String name;
 	String description;
-	double price;
+	Double price;
 	
 	
-
 	public String getName() {
 		return name;
 	}
-	
 	
 	public void setName(String name) {
 		this.name = name;
@@ -38,18 +36,32 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public Product(String name, String description, double price) {
+	
+	
+	public Product(Long id, String name, String description, double price) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
 	public Product() {
 		super();
 	}
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", description=" + description + ", price=" + price + "]";
+		return "Product [name=" + name + ", description=" + description + ", price=" + price + ", id=" + id + "]";
 	}
 	
 	
